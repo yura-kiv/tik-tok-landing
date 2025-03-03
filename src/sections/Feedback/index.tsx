@@ -30,6 +30,7 @@ const Feedback: React.FC = () => {
         slidesPerView="auto"
         spaceBetween={24}
         modules={[Scrollbar]}
+        slideActiveClass={s.active}
         scrollbar={{
           hide: false,
           draggable: true,

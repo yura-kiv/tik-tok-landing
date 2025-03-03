@@ -13,6 +13,7 @@
   position: relative;
   box-shadow: 0px 20px 30px -10px #05353d;
   max-width: 323px;
+  height: 456px;
 }
 
 .card {
@@ -20,7 +21,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 456px;
+  height: 100%;
 }
 
 .img {

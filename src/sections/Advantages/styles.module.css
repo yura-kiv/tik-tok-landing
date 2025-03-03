@@ -1,0 +1,94 @@
+.wrapper,
+.cards,
+.card,
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  gap: var(--mobile-section-gap);
+}
+
+.cards {
+  gap: 32px;
+}
+
+.card {
+  align-items: center;
+  gap: 10px;
+  padding: 24px;
+  border-radius: 12px;
+  background: var(--dark-color);
+}
+
+.text {
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.card .title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.card .description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card.painted {
+  background: var(--secondary-color);
+}
+
+.card svg {
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .wrapper {
+    flex-direction: row-reverse;
+    gap: 88px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    grid-template-areas:
+      'card1 card2'
+      'card4 card3';
+  }
+
+  .card:nth-child(1) {
+    grid-area: card1;
+  }
+  .card:nth-child(2) {
+    grid-area: card2;
+  }
+  .card:nth-child(3) {
+    grid-area: card3;
+  }
+  .card:nth-child(4) {
+    grid-area: card4;
+  }
+
+  .titleWrapper {
+    justify-content: center;
+    align-items: end;
+    text-align: right;
+    min-width: 462px;
+  }
+
+  .title,
+  .subTitle {
+    text-align: right;
+  }
+}

@@ -1,0 +1,10 @@
+export { default as Hero } from './Hero';
+export { default as Introduce } from './Introduce';
+export { default as TikTokIs } from './TikTokIs';
+export { default as Packages } from './Packages';
+export { default as MyServices } from './MyServices';
+export { default as Advantages } from './Advantages';
+export { default as Feedback } from './Feedback';
+export { default as FAQ } from './FAQ';
+export { default as ReadyToGrow } from './ReadyToGrow';
+export { default as Footer } from './Footer';

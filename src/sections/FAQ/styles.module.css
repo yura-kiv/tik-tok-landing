@@ -1,0 +1,47 @@
+.wrapper,
+.answers {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  gap: var(--mobile-section-gap);
+}
+
+.button .element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.list {
+}
+
+.list .item {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .wrapper {
+    flex-direction: row;
+    gap: var(--desctop-section-gap);
+  }
+
+  .titleWrapper {
+    flex-basis: 0;
+
+    flex-grow: 2;
+    align-items: start;
+  }
+
+  .title {
+    text-align: start;
+  }
+
+  .answers {
+    flex-basis: 0;
+    flex-grow: 3;
+  }
+}

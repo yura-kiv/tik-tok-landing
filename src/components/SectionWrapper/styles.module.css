@@ -1,0 +1,9 @@
+.wrapper {
+  width: 100%;
+  max-width: var(--desctop-section-max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .wrapper {
+  }
+}

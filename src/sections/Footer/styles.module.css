@@ -1,0 +1,70 @@
+.wrapper,
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.box {
+  gap: 24px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
+
+.copyright {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--secondary-text);
+}
+
+.telegram {
+  display: none;
+}
+
+.desctopLogo {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .telegram {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: scale 0.2s;
+    cursor: pointer;
+  }
+
+  .telegram:hover {
+    scale: 1.1;
+  }
+
+  .mobileLogo {
+    display: none;
+  }
+
+  .desctopLogo {
+    display: block;
+  }
+
+  .links .link {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}

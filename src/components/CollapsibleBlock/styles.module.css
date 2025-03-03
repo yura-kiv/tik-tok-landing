@@ -1,0 +1,111 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  width: 100%;
+  padding: 24px 0px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: start;
+  transition: all 0.2s;
+}
+
+.button svg {
+  flex-shrink: 0;
+}
+
+.wrapper .button svg {
+  transition: all 0.2s;
+}
+
+.wrapper.open .button svg {
+  rotate: 180deg;
+}
+
+.button:hover svg path {
+  transition: all 0.2s;
+}
+
+.button:hover {
+  color: var(--turquoise-color);
+}
+
+.button.fill:hover svg path {
+  fill: var(--turquoise-color);
+}
+
+.button.stroke:hover svg path {
+  stroke: var(--turquoise-color);
+}
+
+.wrapper.open .button {
+  color: var(--turquoise-color);
+}
+
+.wrapper.open .button.fill svg path {
+  fill: var(--turquoise-color);
+}
+
+.wrapper.open .button.stroke svg path {
+  stroke: var(--turquoise-color);
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.2s;
+}
+
+.collapse {
+  width: 100%;
+  min-height: 0;
+  visibility: hidden;
+  transition: visibility 0.2s, margin 0.2s;
+}
+
+.description {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 32px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.wrapper.open .container {
+  grid-template-rows: 1fr;
+}
+
+.wrapper.open .collapse {
+  visibility: visible;
+}
+
+.wrapper {
+  border-top: 1px solid var(--turquoise-color);
+}
+
+.wrapper:last-child {
+  border-bottom: 1px solid var(--turquoise-color);
+}
+
+@media screen and (min-width: 992px) {
+  .button {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

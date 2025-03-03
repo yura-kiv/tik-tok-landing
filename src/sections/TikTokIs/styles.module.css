@@ -1,0 +1,93 @@
+.wrapper {
+  position: relative;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 37.5px;
+}
+
+.wrapper .space {
+  margin-right: 86px;
+}
+
+.tikTokRight {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  width: 96px;
+  rotate: 19deg;
+  opacity: 17%;
+  animation: levitateTikTokRight 3.5s infinite ease-in-out;
+}
+
+.tikTokLeft {
+  position: absolute;
+  top: 0;
+  left: 86px;
+  width: 38px;
+  rotate: -19deg;
+  opacity: 17%;
+  animation: levitateTikTokLeft 3s infinite ease-in-out;
+}
+
+@keyframes levitateTikTokRight {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes levitateTikTokLeft {
+  0%,
+  100% {
+    transform: scale(-100%, 100%) translate(0, 0);
+  }
+  50% {
+    transform: scale(-100%, 100%) translate(0, 10px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wrapper {
+    font-weight: 400;
+    font-size: 69px;
+    line-height: 103.5px;
+  }
+
+  .wrapper .space {
+    margin-right: 192px;
+  }
+
+  .tikTokRight {
+    right: 242px;
+    top: 92px;
+    width: 244px;
+  }
+
+  .tikTokLeft {
+    left: 92px;
+    width: 100px;
+  }
+
+  @keyframes levitateTikTokRight {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes levitateTikTokLeft {
+    0%,
+    100% {
+      transform: scale(-100%, 100%) translate(0, 0%);
+    }
+    50% {
+      transform: scale(-100%, 100%) translate(0, 20px);
+    }
+  }
+}

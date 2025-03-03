@@ -1,0 +1,21 @@
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: var(--primary-color);
+  transition: all 0.2s;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    color: var(--turquoise-color);
+  }
+}
+
+@media (hover: none) {
+  .button:active {
+    color: var(--turquoise-color);
+  }
+}

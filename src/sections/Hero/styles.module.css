@@ -1,0 +1,91 @@
+.wrapper,
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  gap: 215px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.imgMobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-image: url('/imgs/mobileHeroBg.png');
+  background-repeat: no-repeat;
+  background-size: 115%;
+  background-position: top left;
+  filter: opacity(15%);
+  min-width: 322px;
+  z-index: -1;
+  animation: levitate 3s infinite ease-in-out;
+}
+
+.container {
+  gap: 80px;
+}
+
+.imgDesctop {
+  display: none;
+}
+
+@keyframes levitate {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wrapper {
+    gap: 184px;
+  }
+
+  .container {
+    max-width: 592px;
+    gap: 40px;
+  }
+
+  .imgMobile {
+    display: none;
+  }
+
+  .title,
+  .subTitle {
+    text-align: left;
+  }
+
+  .imgDesctop {
+    display: block;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    background-image: url('/imgs/desctopHeroBg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    min-width: 322px;
+    z-index: -1;
+    animation: levitate 3s infinite ease-in-out;
+  }
+
+  @keyframes levitate {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}

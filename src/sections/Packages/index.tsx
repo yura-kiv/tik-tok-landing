@@ -37,24 +37,14 @@ const Packages: React.FC = () => {
         >
           {cards.map((card, idx) => (
             <SwiperSlide key={idx} className={s.slide}>
-              <PackageCard
-                key={card.title}
-                type={idx === 2 ? 'filled' : 'default'}
-                className={s.card}
-                {...card}
-              />
+              <PackageCard key={card.title} className={s.card} {...card} />
             </SwiperSlide>
           ))}
         </Swiper>
       ) : (
         <div className={s.cards}>
-          {cards.map((card, idx) => (
-            <PackageCard
-              key={card.title}
-              type={idx === 2 ? 'filled' : 'default'}
-              className={s.card}
-              {...card}
-            />
+          {cards.map((card) => (
+            <PackageCard key={card.title} className={s.card} {...card} />
           ))}
         </div>
       )}

@@ -5,6 +5,10 @@
   gap: var(--mobile-section-gap);
 }
 
+.wrapper {
+  align-items: center;
+}
+
 .description {
   display: none;
 }
@@ -13,6 +17,7 @@
   .wrapper {
     flex-direction: row;
     gap: 166px;
+    align-items: start;
   }
 
   .button {

@@ -5,7 +5,6 @@ import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 
 type PackageCardProps = {
-  type: 'default' | 'filled';
   title: string;
   subTitle: string;
   optionsTitle: string;
@@ -14,7 +13,6 @@ type PackageCardProps = {
 };
 
 const PackageCard: React.FC<PackageCardProps> = ({
-  type = 'default',
   title,
   subTitle,
   options,
@@ -24,7 +22,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
   const { t } = useTranslation();
 
   return (
-    <div className={clsx(s.card, s[type], className)}>
+    <div className={clsx(s.card, className)}>
       <div className={s.title}>
         <p>{t(title)}</p>
       </div>

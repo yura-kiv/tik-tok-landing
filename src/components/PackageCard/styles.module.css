@@ -9,11 +9,12 @@
   border: 1px solid var(--secondary-color);
   border-radius: 12px;
   padding: 8px;
+  transition: background 0.2s;
 
   width: var(--mobile-width);
 }
 
-.card.filled {
+.card:hover {
   background: var(--secondary-color);
 }
 

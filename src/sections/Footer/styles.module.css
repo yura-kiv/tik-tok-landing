@@ -43,11 +43,12 @@
 @media screen and (min-width: 992px) {
   .telegram {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
     transition: scale 0.2s;
     cursor: pointer;
+    z-index: 20;
   }
 
   .telegram:hover {

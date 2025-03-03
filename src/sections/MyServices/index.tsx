@@ -27,6 +27,7 @@ const MyServices: React.FC = () => {
         {services.map(({ description, title }, idx) => {
           return (
             <CollapsibleBlock
+              key={idx}
               wrapperClassName={s.service}
               buttonClassName={s.button}
               ButtonElement={({ open }) => {
@@ -45,7 +46,7 @@ const MyServices: React.FC = () => {
                     <div className={clsx(s.element, open && s.open)}>
                       <span>{t(title)}</span>
                       <ArrowTopRight />
-                    </div>{' '}
+                    </div>
                   </motion.div>
                 );
               }}

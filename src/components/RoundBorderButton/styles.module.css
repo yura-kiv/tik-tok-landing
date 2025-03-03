@@ -12,6 +12,7 @@
   font-size: 18px;
   line-height: 27px;
   color: var(--primary-color);
+  max-width: 362px;
 
   padding: 0px 24px;
   transition: all 0.2s;

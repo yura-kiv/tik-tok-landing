@@ -11,6 +11,8 @@ const checks = ['views_tiktok', 'traffic_monetization', 'proven_strategies'];
 const Introduce: React.FC = () => {
   const { t } = useTranslation();
 
+  const year = new Date().getFullYear();
+
   return (
     <SectionWrapper id={links.about_me.value} className={s.wrapper}>
       <Title.SectionWrapper className={s.titleWrapper}>
@@ -45,7 +47,7 @@ const Introduce: React.FC = () => {
               className={s.check}
             >
               <CheckCircle className={s.icon} />
-              <p>{t(check)}</p>
+              <p>{t(check, index === 2 ? { year } : {})}</p>
             </motion.div>
           ))}
         </div>

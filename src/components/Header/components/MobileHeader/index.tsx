@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './styles.module.css';
 import MenuLeft from '@/assets/icons/menuLeft.svg?react';
 import Close from '@/assets/icons/close.svg?react';
@@ -14,6 +14,18 @@ const logo81x91 = '/logos/logo71x80.png';
 const MobileHeader: React.FC = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
 
   return (
     <motion.div

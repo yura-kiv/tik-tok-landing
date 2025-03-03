@@ -28,6 +28,7 @@
 
 .container {
   gap: 80px;
+  align-items: center;
 }
 
 .imgDesctop {
@@ -52,6 +53,7 @@
   .container {
     max-width: 592px;
     gap: 40px;
+    align-items: start;
   }
 
   .imgMobile {

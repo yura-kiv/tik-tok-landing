@@ -16,6 +16,8 @@ const links = [
 const Footer: React.FC = () => {
   const { t } = useTranslation();
 
+  const year = new Date().getFullYear();
+
   return (
     <SectionWrapper className={s.wrapper}>
       <div className={s.box}>
@@ -30,7 +32,7 @@ const Footer: React.FC = () => {
         </div>
         <div className={s.copyright}>
           <span>{t('copyright')}</span>
-          <span> © 2025 | </span>
+          <span> © {year} | </span>
           <span>{t('all_rights_reserved')}</span>
         </div>
       </div>
